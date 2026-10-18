@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://mpasm.netlify.app/",
+      "permanent": true
+    }
+  ]
+}
