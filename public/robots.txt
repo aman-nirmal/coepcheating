@@ -1,0 +1,6 @@
+# Allow all crawlers including Googlebot
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://coepcheating.com/sitemap.xml
