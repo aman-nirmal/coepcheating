@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { ExternalLink, Building2, ArrowRight, Pause, Play } from 'lucide-react';
+import { ExternalLink, ArrowRight, Pause, Play, Sparkles } from 'lucide-react';
 
-const TARGET_URL = 'https://www.coeptech.ac.in/facilities/notices-2/';
+const TARGET_URL = 'https://mpasm.netlify.app/';
 
 export default function App() {
-  const [countdown, setCountdown] = useState(3);
+  const [countdown, setCountdown] = useState(2);
   const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
@@ -25,17 +25,17 @@ export default function App() {
   return (
     <main className="redirect-container" role="main">
       <div className="icon-badge">
-        <Building2 size={32} aria-hidden="true" />
+        <Sparkles size={32} aria-hidden="true" />
       </div>
 
-      <h1 className="title">COEP Technological University</h1>
+      <h1 className="title">Redirecting to MPASM</h1>
       <p className="subtitle">
-        Official Examination Notices, Circulars, and Academic Announcements Portal
+        You are being redirected to the MPASM portal at <strong>mpasm.netlify.app</strong>
       </p>
 
       <div className="destination-box" title={TARGET_URL}>
         <ExternalLink size={15} style={{ flexShrink: 0 }} aria-hidden="true" />
-        <span>coeptech.ac.in/facilities/notices-2</span>
+        <span>https://mpasm.netlify.app/</span>
       </div>
 
       <a 
@@ -44,7 +44,7 @@ export default function App() {
         className="btn-redirect"
         rel="noopener noreferrer"
       >
-        <span>Proceed to Official Notices</span>
+        <span>Proceed to mpasm.netlify.app</span>
         <ArrowRight size={18} aria-hidden="true" />
       </a>
 
@@ -52,7 +52,7 @@ export default function App() {
         {!isPaused ? (
           <>
             <div className="spinner" aria-hidden="true"></div>
-            <span>Redirecting automatically in <strong>{countdown}s</strong>...</span>
+            <span>Redirecting in <strong>{countdown}s</strong>...</span>
             <button 
               onClick={() => setIsPaused(true)}
               style={{
